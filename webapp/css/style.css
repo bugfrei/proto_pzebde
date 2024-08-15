@@ -1,0 +1,36 @@
+/* Enter your custom styles here */
+
+
+.sapMBtnInner {
+    font-size: 1em;
+    height: 1.6em !important;
+    text-align: center;
+}
+
+.sapMBtnBlau .sapMBtnInner {
+    background-color: #ccccff;
+}
+
+.sapMBtnInnerNormal {
+    @extend .sapMBtnInner
+    font-size: 1em;
+    height: 1.6em !important;
+    text-align: center;
+
+}
+.sapMBtnInnerBig {
+    font-size: 1.4em;
+    height: 3em !important;
+    text-align: center;
+
+}
+
+.sapMBtnContent {
+    align-self: center;
+}
+.vertical-align-label {
+    display: flex;
+    background-color: #ff0000;
+    align-items: bottom;
+    height: 100%;
+}
