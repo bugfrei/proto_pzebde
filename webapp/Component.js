@@ -33,7 +33,8 @@ sap.ui.define([
                     BDEVorgang: {
                         Typ: "",
                         Status: "",
-                        Zeitpunkt: null
+                        Zeitpunkt: null,
+                        preCmd: ""
                     },
                     BDEBuchungen: [],
                     Montage: {
@@ -53,6 +54,10 @@ sap.ui.define([
                         { Nr: 2, Text: "Kommen/Gehen ohne BDE", Beschreibung: "Normales Kommen/Gehen", Schritte: [
                             { Nr: "2.1", Text: "Kommen", Beschreibung: "kommen buchen" },
                             { Nr: "2.2", Text: "Gehen", Beschreibung: "gehen buchen" }
+                        ] },
+                        { Nr: 3, Text: "Kommen, Pause vergessen", Beschreibung: "Pause nachbuchen", Schritte: [
+                            { Nr: "3.1", Text: "Kommen", Beschreibung: "Normales Kommen"},
+                            { Nr: "3.2", Text: "Pausenende", Beschreibung: "Pause nachbuchen (Korrektur)"}
                         ] },
                     ],
                     Schritte: [],

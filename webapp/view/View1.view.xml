@@ -5,14 +5,29 @@
     <SplitContainer id="app">
 
         <masterPages>
-            <Page id="pzebde" title="Log und Einstellungen">
+            <Page title="Log und Einstellungen">
                 <content>
                     <!-- LINKS -->
                     <VBox>
                         <HBox alignItems="End">
                             <Button text="BDE Vogang erstellen" press="onPressBDEVorgangErstellen"
                                 class="sapMBtnInnerNormal" />
-                            <Label text="{data>/BDEVorgang/Typ}" class="sapUiSmallMarginBegin" />
+                        </HBox>
+                        <HBox alignItems="End">
+                            <Label text="Typ:" width="5em" />
+                            <Input value="{data>/BDEVorgang/Typ}" width="15em" />
+                        </HBox>
+                        <HBox alignItems="End">
+                            <Label text="Status:" width="5em" />
+                            <Input value="{data>/BDEVorgang/Status}" width="15em" />
+                        </HBox>
+                        <HBox alignItems="End">
+                            <Label text="Datum:" width="5em" />
+                            <Input value="{data>/BDEVorgang/Zeitpunkt/datum}" width="15em" />
+                        </HBox>
+                        <HBox alignItems="End">
+                            <Label text="Zeit" width="5em" />
+                            <Input value="{data>/BDEVorgang/Zeitpunkt/zeit}" width="15em" />
                         </HBox>
                     </VBox>
                     <html:hr />
@@ -36,28 +51,28 @@
                     </VBox>
                     <VBox>
                         <HBox>
-                            <Button text="08:00" press="onPress8Uhr" width="3.8em" />
-                            <Button text="10:00" press="onPress10Uhr" width="3.8em" />
-                            <Button text="12:00" press="onPress12Uhr" width="3.8em" />
-                            <Button text="14:00" press="onPress14Uhr" width="3.8em" />
-                            <Button text="16:00" press="onPress16Uhr" width="3.8em" />
-                            <Button text="18:00" press="onPress18Uhr" width="3.8em" />
+                            <Button text="08:00" press="onPress8Uhr" width="3.9em" />
+                            <Button text="10:00" press="onPress10Uhr" width="3.9em" />
+                            <Button text="12:00" press="onPress12Uhr" width="3.9em" />
+                            <Button text="14:00" press="onPress14Uhr" width="3.9em" />
+                            <Button text="16:00" press="onPress16Uhr" width="3.9em" />
+                            <Button text="18:00" press="onPress18Uhr" width="3.9em" />
                         </HBox>
                         <HBox>
-                            <Button text="+2h" press="onPressPlus2h" width="3.8em" />
-                            <Button text="+1h" press="onPressPlus1h" width="3.8em" />
-                            <Button text="+30m" press="onPressPlus30m" width="3.8em" />
-                            <Button text="+15m" press="onPressPlus15m" width="3.8em" />
-                            <Button text="+5m" press="onPressPlus5m" width="3.8em" />
-                            <Button text="+1m" press="onPressPlus1m" width="3.8em" />
+                            <Button text="+2h" press="onPressPlus2h" width="3.9em" />
+                            <Button text="+1h" press="onPressPlus1h" width="3.9em" />
+                            <Button text="+30m" press="onPressPlus30m" width="3.9em" />
+                            <Button text="+15m" press="onPressPlus15m" width="3.9em" />
+                            <Button text="+5m" press="onPressPlus5m" width="3.9em" />
+                            <Button text="+1m" press="onPressPlus1m" width="3.9em" />
                         </HBox>
                         <HBox>
-                            <Button text="-2h" press="onPressMinus2h" width="3.8em" />
-                            <Button text="-1h" press="onPressMinus1h" width="3.8em" />
-                            <Button text="-30m" press="onPressMinus30m" width="3.8em" />
-                            <Button text="-15m" press="onPressMinus15m" width="3.8em" />
-                            <Button text="-5m" press="onPressMinus5m" width="3.8em" />
-                            <Button text="-1m" press="onPressMinus1m" width="3.8em" />
+                            <Button text="-2h" press="onPressMinus2h" width="3.9em" />
+                            <Button text="-1h" press="onPressMinus1h" width="3.9em" />
+                            <Button text="-30m" press="onPressMinus30m" width="3.9em" />
+                            <Button text="-15m" press="onPressMinus15m" width="3.9em" />
+                            <Button text="-5m" press="onPressMinus5m" width="3.9em" />
+                            <Button text="-1m" press="onPressMinus1m" width="3.9em" />
                         </HBox>
                     </VBox>
                     <html:hr />
@@ -66,7 +81,7 @@
                         <Button text="Leeren" press="onPressLeeren" class="sapUiSmallMarginBegin" />
                         <Button text="Reset" press="onPressReset" />
                     </HBox>
-                    <HBox alignItems="Center">
+                    <HBox alignItems="Center" visible="false">
                         <!-- Combobox als Itemquelle data Model und die Property Szenarien -->
                         <Label text="Szenarien" />
                         <ComboBox id="cbSzenarien" items="{data>/Szenarien}" class="sapUiSmallMarginBegin" change="onCmbSzenarien">
@@ -75,7 +90,7 @@
                             </items>
                         </ComboBox>
                     </HBox>
-                    <HBox alignItems="Center">
+                    <HBox alignItems="Center" visible="false">
                         <!-- Combobox als Itemquelle data Model und die Property Szenarien -->
                         <Label text="Schritte" />
                         <ComboBox id="cbSchritte" items="{data>/Schritte}" class="sapUiMediumMarginBegin" change="onCmdSchritte" >
@@ -116,7 +131,7 @@
             </Page>
         </masterPages>
         <detailPages>
-            <Page id="page" title="Prototyp">
+            <Page id="pzebde" title="Prototyp">
                 <App class="pzebdeapp">
                     <pages>
                         <Page title="PZEBDE App" showNavButton="true" navButtonPress="onNavBack"
@@ -203,7 +218,47 @@
                                                                             </sap.ui.layout.form:fields>
                                                                         </sap.ui.layout.form:FormElement>
 
-
+                                                                        <sap.ui.layout.form:FormElement
+                                                                        id="pzeElement3"
+                                                                        visible="true">
+                                                                        <sap.ui.layout.form:fields width="500px">
+                                                                        <VBox>
+                                                                            <VBox>
+                                                                                <!-- Tabelle vom data Model und der Property PZEBuchungen mit den Spalten Typ, Pause und Zeitpunkt -->
+                                                                                <Table id="pzeTable" items="{data>/PZEBuchungen}">
+                                                                                    <columns>
+                                                                                        <Column width="7.4em">
+                                                                                            <Text text="Typ" />
+                                                                                        </Column>
+                                                                                        <Column>
+                                                                                            <Text text="Kennung" />
+                                                                                        </Column>
+                                                                                        <Column>
+                                                                                            <Text text="Pause" />
+                                                                                        </Column>
+                                                                                        <Column>
+                                                                                            <Text text="Datum" />
+                                                                                        </Column>
+                                                                                        <Column>
+                                                                                            <Text text="Zeit" />
+                                                                                        </Column>
+                                                                                    </columns>
+                                                                                    <items>
+                                                                                        <ColumnListItem>
+                                                                                            <cells>
+                                                                                                <Text text="{data>Typ}" />
+                                                                                                <Text text="{data>Kennung}" />
+                                                                                                <Text text="{data>Pause}" />
+                                                                                                <Text text="{data>Datum}" />
+                                                                                                <Text text="{data>Zeitpunkt/zeit}" />
+                                                                                            </cells>
+                                                                                        </ColumnListItem>
+                                                                                    </items>
+                                                                                </Table>
+                                                                            </VBox>
+                                                                        </VBox>
+                                                                        </sap.ui.layout.form:fields>
+                                                                    </sap.ui.layout.form:FormElement>
 
                                                                             </sap.ui.layout.form:formElements>
                                                                         </sap.ui.layout.form:FormContainer>
@@ -819,8 +874,8 @@
                                         <TimePicker id="ssp_time"></TimePicker>
                                     </HBox>
                                     <HBox>
-                                        <Button id="ssp_buchen" text="Buchen" />
-                                        <Button id="ssp_abbruch" text="Abbruch" />
+                                        <Button press="onSSPBuchen" id="ssp_buchen" text="Buchen" />
+                                        <Button press="onSSPAbbruch" id="ssp_abbruch" text="Abbruch" />
                                     </HBox>
                             </VBox>
 
