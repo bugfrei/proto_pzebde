@@ -1,28 +1,63 @@
 /* Enter your custom styles here */
 
 
-.sapMBtnInner {
-    font-size: 1em;
-    height: 1.6em !important;
-    text-align: center;
+
+.BtnBlau .sapMBtnInner {
+    background-color: #5555ff;
+}
+.BtnDunkelblau .sapMBtnInner {
+    background-color: #111177;
+}
+.BtnGrau .sapMBtnInner {
+    background-color: #888888;
 }
 
-.sapMBtnBlau .sapMBtnInner {
-    background-color: #ccccff;
-}
-
-.sapMBtnInnerNormal {
-    @extend .sapMBtnInner
-    font-size: 1em;
-    height: 1.6em !important;
-    text-align: center;
-
-}
-.sapMBtnInnerBig {
-    font-size: 1.4em;
+.BtnInnerNormalPrim .sapMBtnInner {
+    font-size: 1.4em !important;
     height: 3em !important;
     text-align: center;
+    color: white;
+}
+.BtnNormalPrim {
+    height: 6em !important;
+    width: 45em !important;
+    margin-right: 2em;
+}
 
+.BtnInnerBigPrim .sapMBtnInner {
+    font-size: 1.8em !important;
+    height: 4em !important;
+    text-align: center;
+    color: white;
+}
+.BtnBigPrim {
+    height: 8em !important;
+    width: 45em !important;
+    margin-right: 2em;
+}
+
+.BtnInnerNormalSec .sapMBtnInner {
+    font-size: 1.4em !important;
+    height: 3em !important;
+    text-align: center;
+    color: white;
+}
+.BtnNormalSec {
+    height: 6em !important;
+    width: 22.5em !important;
+    margin-right: 1em;
+}
+
+.BtnInnerBigSec .sapMBtnInner {
+    font-size: 1.8em !important;
+    height: 4em !important;
+    text-align: center;
+    color: white;
+}
+.BtnBigSec {
+    height: 8em !important;
+    width: 22.5em !important;
+    margin-right: 1em;
 }
 
 .sapMBtnContent {

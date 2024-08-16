@@ -57,7 +57,55 @@ sap.ui.define([
                     ],
                     Schritte: [],
                     SchrittBeschreibung: "",
-                    Status: "Test"
+                    Status: "Test",
+                    SSP: {
+                        Ereignistyp: "Kommen",
+                        Pause: false
+                    },
+                    primaryLeft: {
+                        Label: "Primär Links!",
+                        Visible: true,
+                        ToolTip: "l",
+                        Color: "Blau",
+                        Big: true
+                    },
+                    primaryRight: {
+                        Label: "Primär g_, Rechts!",
+                        Visible: true,
+                        ToolTip: "r",
+                        Color: "Blau",
+                        Big: true
+                    },
+                    PrimaryLabel: "Primär",
+                    secondary1: {
+                        Label: "Sekundär 1!",
+                        Visible: true,
+                        ToolTip: "1",
+                        Color: "Grau",
+                        Big: false
+                    },
+                    secondary2: {
+                        Label: "Sekundär 2!",
+                        Visible: true,
+                        ToolTip: "2",
+                        Color: "Grau",
+                        Big: false
+                    },
+                    secondary3: {
+                        Label: "Sekundär 3!",
+                        Visible: true,
+                        ToolTip: "3",
+                        Color: "Grau",
+                        Big: false
+                    },
+                    fecondary4: {
+                        Label: "Sekundär 4!",
+                        Visible: true,
+                        ToolTip: "4",
+                        Color: "Grau",
+                        Big: false
+                    },
+                    SecondaryLabel: "Sekundär"
                 });
                 
                 //this.getView().setModel(model, "data");

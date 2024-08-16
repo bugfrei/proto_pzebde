@@ -2,10 +2,10 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns:core="sap.ui.core" xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns="sap.m">
-    <SplitContainer>
+    <SplitContainer id="app">
 
         <masterPages>
-            <Page title="Log und Einstellungen">
+            <Page id="pzebde" title="Log und Einstellungen">
                 <content>
                     <!-- LINKS -->
                     <VBox>
@@ -130,7 +130,7 @@
                                             <content>
                                                 <sap.ui.layout:Grid
                                                     xmlns:sap.ui.layout="sap.ui.layout"
-                                                    id="pzeGrid" defaultSpan="XL6 L6 M6 S12">
+                                                    id="pzeGrid" defaultSpan="XL12 L12 M12 S12">
                                                     <sap.ui.layout:content>
                                                         <FlexBox width="100%" id="pzeBox0"
                                                             direction="Column">
@@ -150,23 +150,56 @@
                                                                                 <VBox>
                                                                                 <HBox alignItems="End">
                                                                                     <Label text="Name:" width="100px" />
-                                                                                    <Input width="100%"
+                                                                                    <Input width="300px"
                                                                                         value="John Doe"
                                                                                         editable="false" />
                                                                                 </HBox>
                                                                                 <HBox alignItems="End">
                                                                                     <Label text="Personalnr.:" width="100px" />
-                                                                                    <Input width="100%"
+                                                                                    <Input width="300px"
                                                                                         value="12345"
                                                                                         editable="false" />
                                                                                 </HBox>
                                                                                 <HBox alignItems="End">
                                                                                     <Label text="Status:" width="100px" />
-                                                                                    <Input width="100%"
+                                                                                    <Input width="300px"
                                                                                         value="{data>/Status}"
                                                                                         editable="false" />
                                                                                 </HBox>
-</VBox>
+                                                                            </VBox>
+                                                                            </sap.ui.layout.form:fields>
+                                                                        </sap.ui.layout.form:FormElement>
+
+                                                                        <sap.ui.layout.form:FormElement
+                                                                            id="pzeElement1"
+                                                                            visible="true">
+                                                                            <sap.ui.layout.form:fields width="500px">
+                                                                            <VBox>
+                                                                                    <HBox>
+                                                                                        <Label text="{data>/PrimaryLabel}" />
+                                                                                    </HBox>
+                                                                                <HBox alignItems="End">
+                                                                                <Button press="onPrimaryLeft" id="primaryLeft" text="{data>/primaryLeft/Label}" visible="{data>/primaryLeft/Visible}" tooltip="{data>/PrimaryLeft/ToolTip}" class="sapBtnBig sapMBtnBlau sapMBtnInnerBig"/>
+                                                                                <Button press="onPrimaryRight" id="primaryRight" text="{data>/primaryRight/Label}" visible="{data>/primaryRight/Visible}" tooltip="{data>/PrimaryRight/ToolTip}" class="sapBtnBig sapMBtnBlau sapMBtnInnerBig"/>
+                                                                                </HBox>
+                                                                            </VBox>
+                                                                            </sap.ui.layout.form:fields>
+                                                                        </sap.ui.layout.form:FormElement>
+                                                                        <sap.ui.layout.form:FormElement
+                                                                            id="pzeElement2"
+                                                                            visible="true">
+                                                                            <sap.ui.layout.form:fields width="500px">
+                                                                            <VBox>
+                                                                                    <HBox>
+                                                                                        <Label text="{data>/SecondaryLabel}" />
+                                                                                    </HBox>
+                                                                                <HBox alignItems="End">
+                                                                                <Button press="onSecondary1" id="secondary1" text="{data>/secondary1/Label}" visible="{data>/secondary1/Visible}" tooltip="{data>/secondary1/ToolTip}" class="sapBtnBig sapMBtnBlau sapMBtnInnerBig"/>
+                                                                                <Button press="onSecondary2" id="secondary2" text="{data>/secondary2/Label}" visible="{data>/secondary2/Visible}" tooltip="{data>/secondary2/ToolTip}" class="sapBtnBig sapMBtnBlau sapMBtnInnerBig"/>
+                                                                                <Button press="onSecondary3" id="secondary3" text="{data>/secondary3/Label}" visible="{data>/secondary3/Visible}" tooltip="{data>/secondary3/ToolTip}" class="sapBtnBig sapMBtnBlau sapMBtnInnerBig"/>
+                                                                                <Button press="onSecondary4" id="secondary4" text="{data>/secondary4/Label}" visible="{data>/secondary4/Visible}" tooltip="{data>/secondary4/ToolTip}" class="sapBtnBig sapMBtnBlau sapMBtnInnerBig"/>
+                                                                                </HBox>
+                                                                            </VBox>
                                                                             </sap.ui.layout.form:fields>
                                                                         </sap.ui.layout.form:FormElement>
 
@@ -770,6 +803,28 @@
                 </App>
 
             </Page>
+                        <Page id="korrektur" title="SSP RFC">
+                            <VBox>
+                                    <Label text="Ereignis anlegen" />
+                                    <HBox alignItems="End">
+                                        <Label text="Ereignistyp" width="6em"  />
+                                        <Input value="{data>/SSP/Ereignistyp}" editable="false" />
+                                    </HBox>
+                                    <HBox alignItems="End">
+                                        <Label text="Datum" width="6em" />
+                                        <DatePicker id="ssp_date"></DatePicker>
+                                    </HBox>
+                                    <HBox alignItems="End">
+                                        <Label text="Uhrzeit" width="6em" />
+                                        <TimePicker id="ssp_time"></TimePicker>
+                                    </HBox>
+                                    <HBox>
+                                        <Button id="ssp_buchen" text="Buchen" />
+                                        <Button id="ssp_abbruch" text="Abbruch" />
+                                    </HBox>
+                            </VBox>
+
+                        </Page>
         </detailPages>
 
     </SplitContainer>
