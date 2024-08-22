@@ -51,28 +51,28 @@
                     </VBox>
                     <VBox>
                         <HBox>
-                            <Button text="08:00" press="onPress8Uhr" width="3.9em" />
-                            <Button text="10:00" press="onPress10Uhr" width="3.9em" />
-                            <Button text="12:00" press="onPress12Uhr" width="3.9em" />
-                            <Button text="14:00" press="onPress14Uhr" width="3.9em" />
-                            <Button text="16:00" press="onPress16Uhr" width="3.9em" />
-                            <Button text="18:00" press="onPress18Uhr" width="3.9em" />
+                            <Button text="08:00" press="onPress8Uhr" width="4.7em" />
+                            <Button text="10:00" press="onPress10Uhr" width="4.7em" />
+                            <Button text="12:00" press="onPress12Uhr" width="4.7em" />
+                            <Button text="14:00" press="onPress14Uhr" width="4.7em" />
+                            <Button text="16:00" press="onPress16Uhr" width="4.7em" />
+                            <Button text="18:00" press="onPress18Uhr" width="4.7em" />
                         </HBox>
                         <HBox>
-                            <Button text="+2h" press="onPressPlus2h" width="3.9em" />
-                            <Button text="+1h" press="onPressPlus1h" width="3.9em" />
-                            <Button text="+30m" press="onPressPlus30m" width="3.9em" />
-                            <Button text="+15m" press="onPressPlus15m" width="3.9em" />
-                            <Button text="+5m" press="onPressPlus5m" width="3.9em" />
-                            <Button text="+1m" press="onPressPlus1m" width="3.9em" />
+                            <Button text="+2h" press="onPressPlus2h" width="4.7em" />
+                            <Button text="+1h" press="onPressPlus1h" width="4.7em" />
+                            <Button text="+30m" press="onPressPlus30m" width="4.7em" />
+                            <Button text="+15m" press="onPressPlus15m" width="4.7em" />
+                            <Button text="+5m" press="onPressPlus5m" width="4.7em" />
+                            <Button text="+1m" press="onPressPlus1m" width="4.7em" />
                         </HBox>
                         <HBox>
-                            <Button text="-2h" press="onPressMinus2h" width="3.9em" />
-                            <Button text="-1h" press="onPressMinus1h" width="3.9em" />
-                            <Button text="-30m" press="onPressMinus30m" width="3.9em" />
-                            <Button text="-15m" press="onPressMinus15m" width="3.9em" />
-                            <Button text="-5m" press="onPressMinus5m" width="3.9em" />
-                            <Button text="-1m" press="onPressMinus1m" width="3.9em" />
+                            <Button text="-2h" press="onPressMinus2h" width="4.7em" />
+                            <Button text="-1h" press="onPressMinus1h" width="4.7em" />
+                            <Button text="-30m" press="onPressMinus30m" width="4.7em" />
+                            <Button text="-15m" press="onPressMinus15m" width="4.7em" />
+                            <Button text="-5m" press="onPressMinus5m" width="4.7em" />
+                            <Button text="-1m" press="onPressMinus1m" width="4.7em" />
                         </HBox>
                     </VBox>
                     <html:hr />
