@@ -20,7 +20,7 @@
 }
 .BtnNormalPrim {
     height: 6em !important;
-    width: 45em !important;
+    width: 40em !important;
     margin-right: 2em;
 }
 
@@ -32,7 +32,7 @@
 }
 .BtnBigPrim {
     height: 8em !important;
-    width: 45em !important;
+    width: 42em !important;
     margin-right: 2em;
 }
 
@@ -44,8 +44,8 @@
 }
 .BtnNormalSec {
     height: 6em !important;
-    width: 22.5em !important;
-    margin-right: 1em;
+    width: 21em !important;
+    margin-right: 0.7em;
 }
 
 .BtnInnerBigSec .sapMBtnInner {
